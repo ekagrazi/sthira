@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-guide-gita: var(--guide-gita);
+  --color-guide-gita-ink: var(--guide-gita-ink);
+  --color-guide-marcus: var(--guide-marcus);
+  --color-guide-marcus-ink: var(--guide-marcus-ink);
+  --color-guide-buddha: var(--guide-buddha);
+  --color-guide-buddha-ink: var(--guide-buddha-ink);
+  --color-guide-rumi: var(--guide-rumi);
+  --color-guide-rumi-ink: var(--guide-rumi-ink);
+  --color-guide-camus: var(--guide-camus);
+  --color-guide-camus-ink: var(--guide-camus-ink);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-lora);
+  --font-heading: var(--font-inter);
+  --radius-sm: calc(var(--radius) * 0.65);
+  --radius-md: calc(var(--radius) * 0.82);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.35);
+  --radius-2xl: calc(var(--radius) * 1.7);
+  --shadow-card: var(--shadow-soft);
+}
+
+:root {
+  --background: #f8f3ec;
+  --foreground: #302923;
+  --card: #fffdfa;
+  --card-foreground: #302923;
+  --popover: #fffdfa;
+  --popover-foreground: #302923;
+  --primary: #382c24;
+  --primary-foreground: #fffdf9;
+  --secondary: #f3ece4;
+  --secondary-foreground: #352f2a;
+  --muted: #f1ebe4;
+  --muted-foreground: #736b61;
+  --accent: #eee5db;
+  --accent-foreground: #352f2a;
+  --destructive: #a62f2f;
+  --border: #e5dbd0;
+  --input: #d5c9bd;
+  --ring: #67584b;
+
+  --guide-gita: #d97706;
+  --guide-gita-ink: #854007;
+  --guide-marcus: #4b6b88;
+  --guide-marcus-ink: #3c5c78;
+  --guide-buddha: #6b8e6b;
+  --guide-buddha-ink: #426b48;
+  --guide-rumi: #7a5c8e;
+  --guide-rumi-ink: #684b7b;
+  --guide-camus: #8c8c8c;
+  --guide-camus-ink: #595653;
+
+  --space-page: clamp(1rem, 3vw, 2.5rem);
+  --content-width: 80rem;
+  --sidebar-width: 15rem;
+  --radius: 0.85rem;
+  --radius-card: 1.1rem;
+  --shadow-soft: 0 1px 2px rgb(52 43 35 / 5%), 0 12px 34px rgb(52 43 35 / 5%);
+  --shadow-lifted: 0 4px 10px rgb(52 43 35 / 8%), 0 22px 46px rgb(52 43 35 / 9%);
+  --motion-fast: 160ms;
+  --motion-calm: 420ms;
+  --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/55;
+  }
+
+  html {
+    @apply bg-background font-sans;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply min-h-screen bg-background font-sans text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at 8% 3%, rgb(217 119 6 / 7%), transparent 25rem),
+      radial-gradient(circle at 96% 92%, rgb(75 107 136 / 7%), transparent 28rem);
+    position: relative;
+  }
+
+  body::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.36'/%3E%3C/svg%3E");
+    content: "";
+    inset: 0;
+    opacity: 0.035;
+    pointer-events: none;
+    position: fixed;
+    z-index: 50;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--guide-gita) 22%, transparent);
+  }
+}
+
+@layer utilities {
+  .page-enter {
+    animation: page-enter var(--motion-calm) var(--ease-calm) both;
+  }
+
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.54; }
+  50% { opacity: 0.9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

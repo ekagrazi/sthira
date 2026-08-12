@@ -1,0 +1,80 @@
+{
+  "bhagavad-gita": {
+    "citation_prefix": "Bhagavad Gita",
+    "fetch_allowed": true,
+    "guide_slug": "bhagavad-gita",
+    "parser": "sacred-texts-gita",
+    "rights": "Public domain in the USA; Swami Swarupananda translation, 1909",
+    "source_work": "Srimad Bhagavad Gita",
+    "source_url": "https://archive.sacred-texts.com/hin/sbg/index.htm",
+    "translator": "Swami Swarupananda",
+    "source_urls": [
+      "https://archive.sacred-texts.com/hin/sbg/sbg06.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg07.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg08.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg09.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg10.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg11.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg12.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg13.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg14.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg15.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg16.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg17.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg18.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg19.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg20.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg21.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg22.htm",
+      "https://archive.sacred-texts.com/hin/sbg/sbg23.htm"
+    ]
+  },
+  "buddha": {
+    "citation_prefix": "Dhammapada",
+    "fetch_allowed": true,
+    "guide_slug": "buddha",
+    "parser": "numbered-verses",
+    "rights": "Public domain in the USA; F. Max Muller translation, 1881",
+    "source_work": "The Dhammapada",
+    "source_url": "https://www.gutenberg.org/cache/epub/2017/pg2017.txt",
+    "translator": "F. Max Muller"
+  },
+  "marcus-aurelius": {
+    "citation_prefix": "Meditations",
+    "fetch_allowed": true,
+    "guide_slug": "marcus-aurelius",
+    "parser": "meditations",
+    "rights": "Public domain in the USA; Meric Casaubon translation",
+    "source_work": "Meditations",
+    "source_url": "https://www.gutenberg.org/cache/epub/2680/pg2680.txt",
+    "translator": "Meric Casaubon"
+  },
+  "rumi": {
+    "citation_prefix": "Masnavi",
+    "fetch_allowed": true,
+    "guide_slug": "rumi",
+    "parser": "masnavi",
+    "rights": "Public domain; E. H. Whinfield translation, 1898",
+    "source_work": "Masnavi",
+    "source_url": "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_I",
+    "translator": "E. H. Whinfield",
+    "source_urls": [
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_I",
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_II",
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_III",
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_IV",
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_V",
+      "https://en.wikisource.org/wiki/Masnavi_I_Ma%27navi/Book_VI"
+    ]
+  },
+  "rumi-divan": {
+    "citation_prefix": "Divan-e Shams",
+    "fetch_allowed": true,
+    "guide_slug": "rumi",
+    "parser": "divan",
+    "rights": "Public domain; R. A. Nicholson translation, 1898",
+    "source_work": "Selected Poems from the Divan-e Shams",
+    "source_url": "https://dn790000.ca.archive.org/0/items/in.ernet.dli.2015.52959/2015.52959.Selected-Poems-From-The-Divani-Shamsi-Tabriz_djvu.txt",
+    "translator": "R. A. Nicholson"
+  }
+}
